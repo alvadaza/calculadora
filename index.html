@@ -78,6 +78,7 @@
             <button onclick="appendToDisplay('-')">-</button>
             <button onclick="appendToDisplay('*')">*</button>
             <button onclick="appendToDisplay('/')">/</button>
+            <button onclick="borrarCaracter()">Del</button>
         </div>
     </div>
 </body>
@@ -95,5 +96,9 @@
         var result = eval(expression);
         document.getElementById('display').value = result;
     }
+    function borrarCaracter() {
+        display.value = display.value.slice(0, -1);
+      }
+
 </script>
 </html>
